@@ -87,4 +87,13 @@ class TaskDAO(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null,
         return Task(id, title, content)
     }
 
+    fun deleteTask(taskID: Int) {
+        val db = writableDatabase
+        val whereClause = "$COLUMN_ID = ?"
+        val whereArgs = arrayOf(taskID.toString())
+
+        db.delete(TABLE_NAME, whereClause, whereArgs)
+        db.close()
+    }
+
 }
