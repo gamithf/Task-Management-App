@@ -35,7 +35,7 @@ class UpdateTaskActivity : AppCompatActivity() {
             db.updateTask(updatedTask)
             finish()
 
-            Toast.makeText(this, "Task Updated!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Task Updated", Toast.LENGTH_SHORT).show()
         }
 
     }

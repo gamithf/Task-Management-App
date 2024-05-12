@@ -43,7 +43,7 @@ class TasksAdapter(private var tasks: List<Task>, context: Context) : RecyclerVi
             db.deleteTask(task.id)
             refreshData(db.getAllTasks())
 
-            Toast.makeText(holder.itemView.context, "Task Completed!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(holder.itemView.context, "Task Completed", Toast.LENGTH_SHORT).show()
         }
     }
 
